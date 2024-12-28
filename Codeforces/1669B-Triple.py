@@ -1,15 +1,19 @@
+from collections import Counter
+from sys import stdin, stdout
+
+def solve(arr, n):
+    cnt = Counter(arr)
+    result = -1
+
+    for val, freq in cnt.items():
+        if freq >= 3:
+            result = val;
+    return result
 
 t = int(input())
 for _ in range(t):
-    n = int(input())
-    row = list(map(int, input().split()))
+    n = int(stdin.readline())
+    arr = list(map(int, stdin.readline().split()))
 
-    arr = [0] * len(row)
-    for i in range(n):
-        arr[row[i]] += 1
-
-    result = 0
-    for val in arr:
-        if val >= 3:
-            result = val 
-    print(result)
+    ans = solve(arr, n)
+    print(ans)
