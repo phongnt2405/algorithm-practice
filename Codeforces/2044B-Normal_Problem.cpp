@@ -1,22 +1,26 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
   int t;
-  std::cin >> t;
+  cin >> t;
 
   while (t--) {
-    std::string s;
-    std::cin >> s;
+    string s;
+    cin >> s;
 
     int n = s.length();
-    std::string ans = "";
+    string ans = "";
+
     for (int i = n - 1; i >= 0; i--) {
       if (s[i] == 'q') ans += 'p';
       else if (s[i] == 'p') ans += 'q';
       else ans += 'w';
     }
 
-    std::cout << ans << "\n";
+    cout << ans << "\n";
   }
 }

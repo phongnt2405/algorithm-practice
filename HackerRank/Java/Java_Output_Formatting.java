@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Java_Output_Formatting {
 
 	public static void main(String[] args) {
@@ -13,6 +15,11 @@ public class Java_Output_Formatting {
 		int n3 = scanner.nextInt();
 
 		System.out.println("================================");
-		System.out.printf("%s               ")
+		System.out.printf("%s           %3d\n", s1, n1);
+		System.out.printf("%s           %3d\n", s2, n2);
+		System.out.printf("%s           %3d\n", s3, n3);
+		System.out.println("================================");
+
+		scanner.close();
 	}
 }
