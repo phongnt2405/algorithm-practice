@@ -2,20 +2,9 @@
 #include <array>
 #include <string>
 
-bool check(std::array<std::array<char, 8>, 8> grid, int n, int i) {
-  int count = 0;
-  for (int j = 0; j < n; j++) {
-    if (grid[i - 1][j] == '#') count++;
-  }
-
-  if (count != 2) return false;
-  count = 0;
-  for (int j = 0; j < n; j++) {
-    if (grid[i + 1][j] == '#') count++;
-  }
-
-  if (count != 2) return false;
-  return true;
+bool check(std::array<std::array<int, 8>, 8> grid, int n, int i, int j) {
+  int i2 = i, j2 = j;
+  while ()
 }
 
 void solve(std::array<std::array<char, 8>, 8> grid, int& a, int& b) {  
