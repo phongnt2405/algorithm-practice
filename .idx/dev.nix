@@ -14,6 +14,8 @@
     pkgs.clang
     pkgs.gcc 
     pkgs.pypy3
+    pkgs.openjdk21
+    pkgs.fastfetch
   ];
 
   # Sets environment variables in the workspace
