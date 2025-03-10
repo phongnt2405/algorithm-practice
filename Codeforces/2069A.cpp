@@ -2,24 +2,31 @@
 #include <vector>
 
 bool solve(std::vector<int>& arr, int n) {
-
+  for (int i = 0; i + 2 < n; i++) {
+    if (arr[i] && !arr[i + 1] && arr[i + 2]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 int main() {
-  std::ios::sync_with_stdio(0);
-  std::cin.tie(0);
-
+  std::ios_base::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+  
   int t;
   std::cin >> t;
 
   while (t--) {
     int n;
     std::cin >> n;
+    n -= 2;
 
-    std::vector<int> arr(n - 2);
-    for (int i = 0; i < n - 2; i++) {
-      std::cin >> arr[i];
-    }
+    std::vector<int> arr(n);
+    for (int& x : arr) 
+      std::cin >> x;
 
+    bool ans = solve(arr, n);
+    std::cout << (ans ? "YES" : "NO") << "\n";
   }
 }

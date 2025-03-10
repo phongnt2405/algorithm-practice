@@ -1,4 +1,4 @@
-nclude <iostream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
@@ -6,8 +6,8 @@ std::vector<int> solve(std::vector<int>& P, std::vector<int>& Q, int n) {
   std::vector<int> ans(n);
   
   for (int i = 0; i < n; i++) {
-      ans[Q[i] - 1] = Q[P[i] - 1];
-    }
+    ans[Q[i] - 1] = Q[P[i] - 1];
+  }
   return ans;
 }
 
@@ -26,7 +26,6 @@ int main() {
 
   std::vector<int> ans = solve(P, Q, n);
   for (int val : ans) {
-      std::cout << val << " ";
-    }
+    std::cout << val << " ";
+  }
 }
-
