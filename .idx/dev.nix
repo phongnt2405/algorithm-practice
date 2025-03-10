@@ -6,6 +6,8 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.fish
+
     pkgs.go
     pkgs.python311
     pkgs.python311Packages.pip
@@ -14,8 +16,9 @@
     pkgs.clang
     pkgs.gcc 
     pkgs.pypy3
-    pkgs.openjdk21
-    pkgs.fastfetch
+    pkgs.openjdk21  
+    pkgs.rustc
+    
   ];
 
   # Sets environment variables in the workspace

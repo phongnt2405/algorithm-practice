@@ -37,7 +37,6 @@ func solve(arr [][]rune, s string, h, w, x, y int) (int, int, int) {
       arr[x][y] = '.'
       count++
     }
-
   }
 
   return x + 1, y + 1, count
